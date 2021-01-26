@@ -28,7 +28,7 @@ export default {
   },
   mounted() {
     axios
-      .get('http://192.168.1.102:3000/movies')
+      .get('http://localhost:3000/movies')
       .then(response => {
         this.info = response.data
       })
