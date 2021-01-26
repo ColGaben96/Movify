@@ -1,41 +1,40 @@
 <template>
   <div>
+      <br>
+      <h3>Insertar Película</h3>
       <b-container fluid>
-          <b-form 
-          @submit="onSubmit" 
-          @reset="onReset" 
-          v-if="show">
+          <b-form>
               <b-form-group
               id="movieData"
               label="Ingresa los datos de la película">
                 <b-form-input
                 id="movieName"
-                v-model="form.name"
+                type="text"                
                 placeholder="Ingresa el nombre de la película"
                 required></b-form-input>
                 <b-form-input
-                id="moviePicture"
-                v-model="form.image"
+                id="moviePicture"   
+                type="text"             
                 placeholder="Ingresa la url de la carátula"
                 ></b-form-input>
                 <b-form-input
                 id="movieDescription"
-                v-model="form.description"
+                type="text"             
                 placeholder="Ingresa la sinopsis de la película"
                 ></b-form-input>
                 <b-form-input
-                id="movieCategories"
-                v-model="form.categories"
+                id="movieCategories" 
+                type="text"               
                 placeholder="Ingresa las categorías"
                 required></b-form-input>
                 <b-form-input
                 id="movieTrailer"
-                v-model="form.trailer"
+                type="text"
                 placeholder="Ingresa la url del trailer de la película"
                 ></b-form-input>
                 <b-form-input
-                id="movieName"
-                v-model="form.date"
+                id="movieRelease"
+                type="date"
                 placeholder="Ingresa la fecha de estreno"
                 ></b-form-input>
               </b-form-group>
@@ -51,7 +50,11 @@
 
 <script>
 export default {
-
+    data() {
+        return {
+            info: String
+        }
+    }
 }
 </script>
 

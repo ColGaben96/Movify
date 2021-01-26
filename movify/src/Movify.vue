@@ -7,6 +7,8 @@
     </b-navbar>
     <b-container>
       <br>
+    <MovieInsertion info></MovieInsertion>
+    <MovieNews info></MovieNews>
      <MovieTable items></MovieTable>
     </b-container>
   </div>
@@ -14,10 +16,14 @@
 
 <script setup>
   import MovieTable from './components/MovieTable.vue'
+  import MovieInsertion from './components/MovieInsertion.vue'
+  import MovieNews from './components/MovieNews.vue'
 
   export default {
     components: {
-      MovieTable
+      MovieTable,
+      MovieInsertion,
+      MovieNews
     }
   }
 </script>

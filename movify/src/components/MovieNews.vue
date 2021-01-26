@@ -1,7 +1,7 @@
 <template>
-  <div>
+<div>
     <br>
-    <h3>Lista de Películas</h3>
+    <h3>Novedades</h3>
     <b-container fluid>
       <b-table 
       responsive 
@@ -9,13 +9,13 @@
       hover 
       :items="info"
       caption-top>
-        <template #table-caption>No todas las películas tienen datos exactos. Pero te agradecemos que nos ayudes insertando datos.</template>
+        <template #table-caption>Aquí van las películas que fueron lanzadas hasta 3 semanas.</template>
         <template #cell(picture) = "data">
           <img :src="data.value" width="30%" height="auto">
         </template>
       </b-table>
     </b-container>
-  </div>
+</div>
 </template>
 
 <script>
@@ -28,7 +28,7 @@ export default {
   },
   mounted() {
     axios
-      .get('http://192.168.1.102:3000/movies')
+      .get('http://192.168.1.102:3000/news')
       .then(response => {
         this.info = response.data
       })
